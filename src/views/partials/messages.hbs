@@ -1,0 +1,30 @@
+<!--esto es la creacion de una ALERTA DE MENSAJE EN PANTALA, esta sintaxys esta tomada de alerts de boostrap-->
+{{#if success_msg}}
+<!--esta es la lista que va a recorrer el each de boostrap ubicada en controllers/notes.controllers-->
+<!--esta es la manera en la handeblas utiliza la condicional IF-->
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{success_msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <!--esto es para que salga la x de cerrar mensaje-->
+    </button>
+</div>
+
+{{/if}}
+<!--cierre de la condiconal IF de handelbas-->
+
+<!--esto es la creacion de una ALERTA DE MENSAJE EN PANTALla en registro correo repetido-->
+<!--no olvidar actualizar la variable global en server js-->
+{{#if error_msg}}
+<!--esta es la lista que va a recorrer el each de boostrap ubicada en controllers/notes.controllers-->
+<!--esta es la manera en la handeblas utiliza la condicional IF-->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{error_msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <!--esto es para que salga la x de cerrar mensaje-->
+    </button>
+</div>
+
+{{/if}}
+<!--cierre de la condiconal IF de handelbas-->

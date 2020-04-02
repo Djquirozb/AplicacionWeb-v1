@@ -1,0 +1,35 @@
+<!-- este es el formulario de registro de usuarios-->
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                Registra Una Cuenta
+            </div>
+            <div class="card-body">
+                <form action="/users/signup" method="POST">
+                    <!-- enviar formulario atravez del metodo post a users/signup-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Name" value="{{name}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}">
+                        <!--con la propiedad value y las dobles llaves llamamos la funcion de handelbals que reescribe los datos tipiados por el usuario-->
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password"
+                            value="{{password}}">
+                        <!--con la propiedad value y las dobles llaves llamamos la funcion de handelbals que reescribe los datos tipiados por el usuario-->
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="confirm_password"
+                            placeholder="Confirm Password" value="{{confirm_password}}">
+                        <!--con la propiedad value y las dobles llaves llamamos la funcion de handelbals que reescribe los datos tipiados por el usuario-->
+                    </div>
+                    <button class="btn btn-primary btn-block">
+                        Registro
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

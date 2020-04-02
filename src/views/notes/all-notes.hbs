@@ -1,0 +1,26 @@
+<div class="row"> <!--modelo tarjeta solo para renderizar notas, mostrar en el navegador la página correspondiente al proceso CRUD de las notas, crear, eliminar, editar -->
+
+    {{#each notes}} <!--esto significa por cada una de las notas q recibo desde el servidor vamos a empezar a recorrerlas  -->
+        <div class="col-md-3"> <!--modelo tarjeta -->
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title d-flex justify-content-between align-items-center"> <!--todas son propiedades de CSS para estilizar los cuadrados -->
+                {{title}} <a href="/notes/edit/{{_id}}"><i class="fa fa-pencil"></i></a> <!--icono, son estilos de https://fontawesome.com/-->
+                </h4> <!-- {{title}} sgnifica que de todas las notas voy a estar recorriendo el title, ya estoy dentro de notas por el bucle #each de handebals -->
+            <p>{{description}}</p>
+            <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST"> <!--Este es el metodo para procesar la eliminacion de las notas, aparece POST pero internamente se genera un DELETE, configurando con method-override -->
+            <input type="hidden" name="_method" value="DELETE"> <!--es uncampo oculto de tipo hidden -->
+            <button type="submit" class="btn btn-danger btn-block btn-sm"> 
+                DELETE
+            </button>
+            </form>
+        </div>
+    </div>
+
+
+    </div>    
+
+
+
+    {{/each}} <!-- esta sintaxys es handebals, que me permite hacer bucles y condicionales y se handebals lo convierte a html, mtor de plantillas  -->
+</div>

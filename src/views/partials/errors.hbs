@@ -1,0 +1,23 @@
+<!--este codigo es un cuadrado de error de correo ya creado-->
+{{#if error}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{error}} <!--es de tipo error por que asi es como passport le pasa el mensaje de error cuando ya estan en la base de datos -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <!--esto es para que salga la x de cerrar mensaje-->
+    </button>
+</div>
+{{/if}}
+
+<!--este codigo es el mensaje de errores generados al ingreso-->
+{{#each errors}}
+<!--esta es la lista que va a recorrer el each de boostrap ubicada en controllers/users.controllers-->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <!--esto es para que salga la x de cerrar mensaje-->
+    </button>
+</div>
+
+{{/each}}

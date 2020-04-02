@@ -1,0 +1,35 @@
+<div class="col-md-4 mx-auto">
+    <!--esta funcion se encarga contener toda la estructura de la nota tipo tarjeta-->
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>New Note</h3>
+            <!--este es el titulo de la tarjeta -->
+        </div>
+        <div class="card-body">
+            <!--la funcion card-body se encarga de darle cuerpo a los cuadrados dentro de la tarjeta -->
+            <form action="/notes/new-note" method="POST">
+                <!--con la funcion form action enruto la nota donde quiero que se guarde con el metodo "POST" con que fue creado, pendiente que debe ser el mismo metodo -->
+                <div class="form-group">
+                    <!--esto va a separar los input que vallamos creando -->
+                    <input type="text" name="title" class="form-control" placeholder="Title" autofocus>
+                    <!--codigo de boostrap4-->
+                </div>
+                <div class="form-group">
+                    <!--esto va a separar los input que vallamos creando -->
+                    <textarea name="description" placeholder="Description" class="form-control"></textarea>
+                    <!--esta linea es un imput para la decripcion de la tarea, name=descrpcion, asi es como la recibe el servidor, y una class=form-control para que sea estilizado por boostrap -->
+                </div>
+                <!--esto va a separar los input que vallamos creando -->
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">
+                        <!--la orden button creara un boton y "btn btn-primario" son las caracteristicas y el color y ctn-block define que ocupe todo el tamaño dispinible en la pantalla son caracteristicas de CSS-->
+                        Save
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+        <!--aca se finaliza contenido de la tarjeta -->
+    </div>
+</div>

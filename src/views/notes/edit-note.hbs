@@ -1,0 +1,35 @@
+<div class="col-md-4 mx-auto">
+    <!---formato general dela tarjeta,creacion de tarjeta-->
+    <div class="card">
+        <!---modelo de cabecera-->
+        <div class="card-header">
+            <h3>Edit Note</h3>
+            <!---cabecera de la tarjeta-->
+        </div>
+        <div class="card-body">
+            <!---cuerpo de la tarjeta-->
+            <form action="/notes/edit/{{note.id}}?_method=PUT" method="POST">
+                <!---formulario que me permita enviar datos-->
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <!---se usa para darle separacion al formulario-->
+                    <input type="text" name='title' class="form-control" value="{{note.title}}">
+                    <!---con esta linea usando handebals y {con esto meto el texto de la nota a editar} metemos los datos en este recuadro de lo que vamos a editar-->
+                </div>
+                <!---final del div de clase form-group-->
+                <div class="form-group">
+                    <!---se usa para darle separacion al formulario-->
+                    <textarea name="description" class="form-control">{{note.description}} </textarea>
+                    <!---area del texto, y {con esto meto el texto de la nota a editar}-->
+                </div>
+                <!---final del div de clase form-group-->
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        <!---boton -->
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
